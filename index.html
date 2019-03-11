@@ -148,6 +148,19 @@ Additionally, the ~ symbol is used to indicate an item is a package.
   function showrq() {
     console.log(rq);
   }
+  var rq;
+ var linkdata;
+ var nodedata;
+
+ function run(_rq,_nodedata,_linkdata){
+     rq=_rq;
+     nodedata=_nodedata;
+     linkdata=_linkdata;
+     init();
+ }
+function init(){
+    document.querySelector("iframe").contentWindow.run(rq,nodedata,linkdata);
+}
   /**
    * node
    **/
